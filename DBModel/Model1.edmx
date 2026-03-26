@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище studentModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Group">
+          <Key>
+            <PropertyRef Name="ID_Group" />
+          </Key>
+          <Property Name="ID_Group" Type="int" Nullable="false" />
+          <Property Name="Number" Type="nvarchar" MaxLength="3" Nullable="false" />
+          <Property Name="ID_Speciality" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Login_Password_Stud">
+          <Key>
+            <PropertyRef Name="ID_Log_Pass_Stud" />
+          </Key>
+          <Property Name="ID_Log_Pass_Stud" Type="int" Nullable="false" />
+          <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Pasword" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Speciality">
+          <Key>
+            <PropertyRef Name="ID_Speciality" />
+          </Key>
+          <Property Name="ID_Speciality" Type="int" Nullable="false" />
+          <Property Name="Name_Speciality" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Students">
+          <Key>
+            <PropertyRef Name="ID_Stud" />
+          </Key>
+          <Property Name="ID_Stud" Type="int" Nullable="false" />
+          <Property Name="Surname" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="Patronomic" Type="nvarchar" MaxLength="25" />
+          <Property Name="ID_Log_Pass_Stud" Type="int" />
+          <Property Name="Date_Birthday" Type="date" Nullable="false" />
+          <Property Name="ID_Group" Type="int" Nullable="false" />
+          <Property Name="Photo" Type="image" />
+        </EntityType>
+        <Association Name="FK_Group_Speciality">
+          <End Role="Speciality" Type="Self.Speciality" Multiplicity="1" />
+          <End Role="Group" Type="Self.Group" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Speciality">
+              <PropertyRef Name="ID_Speciality" />
+            </Principal>
+            <Dependent Role="Group">
+              <PropertyRef Name="ID_Speciality" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Students_Group">
+          <End Role="Group" Type="Self.Group" Multiplicity="1" />
+          <End Role="Students" Type="Self.Students" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Group">
+              <PropertyRef Name="ID_Group" />
+            </Principal>
+            <Dependent Role="Students">
+              <PropertyRef Name="ID_Group" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Students_Login_Password_Stud">
+          <End Role="Login_Password_Stud" Type="Self.Login_Password_Stud" Multiplicity="0..1" />
+          <End Role="Students" Type="Self.Students" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Login_Password_Stud">
+              <PropertyRef Name="ID_Log_Pass_Stud" />
+            </Principal>
+            <Dependent Role="Students">
+              <PropertyRef Name="ID_Log_Pass_Stud" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище studentModelContainer">
+          <EntitySet Name="Group" EntityType="Self.Group" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Login_Password_Stud" EntityType="Self.Login_Password_Stud" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Speciality" EntityType="Self.Speciality" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Group_Speciality" Association="Self.FK_Group_Speciality">
+            <End Role="Speciality" EntitySet="Speciality" />
+            <End Role="Group" EntitySet="Group" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Students_Group" Association="Self.FK_Students_Group">
+            <End Role="Group" EntitySet="Group" />
+            <End Role="Students" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Students_Login_Password_Stud" Association="Self.FK_Students_Login_Password_Stud">
+            <End Role="Login_Password_Stud" EntitySet="Login_Password_Stud" />
+            <End Role="Students" EntitySet="Students" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="studentModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Group">
+          <Key>
+            <PropertyRef Name="ID_Group" />
+          </Key>
+          <Property Name="ID_Group" Type="Int32" Nullable="false" />
+          <Property Name="Number" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ID_Speciality" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Speciality" Relationship="Self.FK_Group_Speciality" FromRole="Group" ToRole="Speciality" />
+          <NavigationProperty Name="Students" Relationship="Self.FK_Students_Group" FromRole="Group" ToRole="Students" />
+        </EntityType>
+        <EntityType Name="Login_Password_Stud">
+          <Key>
+            <PropertyRef Name="ID_Log_Pass_Stud" />
+          </Key>
+          <Property Name="ID_Log_Pass_Stud" Type="Int32" Nullable="false" />
+          <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Pasword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Students" Relationship="Self.FK_Students_Login_Password_Stud" FromRole="Login_Password_Stud" ToRole="Students" />
+        </EntityType>
+        <EntityType Name="Speciality">
+          <Key>
+            <PropertyRef Name="ID_Speciality" />
+          </Key>
+          <Property Name="ID_Speciality" Type="Int32" Nullable="false" />
+          <Property Name="Name_Speciality" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Group" Relationship="Self.FK_Group_Speciality" FromRole="Speciality" ToRole="Group" />
+        </EntityType>
+        <EntityType Name="Students">
+          <Key>
+            <PropertyRef Name="ID_Stud" />
+          </Key>
+          <Property Name="ID_Stud" Type="Int32" Nullable="false" />
+          <Property Name="Surname" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Patronomic" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="ID_Log_Pass_Stud" Type="Int32" />
+          <Property Name="Date_Birthday" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ID_Group" Type="Int32" Nullable="false" />
+          <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Group" Relationship="Self.FK_Students_Group" FromRole="Students" ToRole="Group" />
+          <NavigationProperty Name="Login_Password_Stud" Relationship="Self.FK_Students_Login_Password_Stud" FromRole="Students" ToRole="Login_Password_Stud" />
+        </EntityType>
+        <Association Name="FK_Group_Speciality">
+          <End Role="Speciality" Type="Self.Speciality" Multiplicity="1" />
+          <End Role="Group" Type="Self.Group" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Speciality">
+              <PropertyRef Name="ID_Speciality" />
+            </Principal>
+            <Dependent Role="Group">
+              <PropertyRef Name="ID_Speciality" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Students_Group">
+          <End Role="Group" Type="Self.Group" Multiplicity="1" />
+          <End Role="Students" Type="Self.Students" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Group">
+              <PropertyRef Name="ID_Group" />
+            </Principal>
+            <Dependent Role="Students">
+              <PropertyRef Name="ID_Group" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Students_Login_Password_Stud">
+          <End Role="Login_Password_Stud" Type="Self.Login_Password_Stud" Multiplicity="0..1" />
+          <End Role="Students" Type="Self.Students" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Login_Password_Stud">
+              <PropertyRef Name="ID_Log_Pass_Stud" />
+            </Principal>
+            <Dependent Role="Students">
+              <PropertyRef Name="ID_Log_Pass_Stud" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="studentEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Group" EntityType="Self.Group" />
+          <EntitySet Name="Login_Password_Stud" EntityType="Self.Login_Password_Stud" />
+          <EntitySet Name="Speciality" EntityType="Self.Speciality" />
+          <EntitySet Name="Students" EntityType="Self.Students" />
+          <AssociationSet Name="FK_Group_Speciality" Association="Self.FK_Group_Speciality">
+            <End Role="Speciality" EntitySet="Speciality" />
+            <End Role="Group" EntitySet="Group" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Students_Group" Association="Self.FK_Students_Group">
+            <End Role="Group" EntitySet="Group" />
+            <End Role="Students" EntitySet="Students" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Students_Login_Password_Stud" Association="Self.FK_Students_Login_Password_Stud">
+            <End Role="Login_Password_Stud" EntitySet="Login_Password_Stud" />
+            <End Role="Students" EntitySet="Students" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище studentModelContainer" CdmEntityContainer="studentEntities">
+          <EntitySetMapping Name="Group">
+            <EntityTypeMapping TypeName="studentModel.Group">
+              <MappingFragment StoreEntitySet="Group">
+                <ScalarProperty Name="ID_Group" ColumnName="ID_Group" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="ID_Speciality" ColumnName="ID_Speciality" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Login_Password_Stud">
+            <EntityTypeMapping TypeName="studentModel.Login_Password_Stud">
+              <MappingFragment StoreEntitySet="Login_Password_Stud">
+                <ScalarProperty Name="ID_Log_Pass_Stud" ColumnName="ID_Log_Pass_Stud" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Pasword" ColumnName="Pasword" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Speciality">
+            <EntityTypeMapping TypeName="studentModel.Speciality">
+              <MappingFragment StoreEntitySet="Speciality">
+                <ScalarProperty Name="ID_Speciality" ColumnName="ID_Speciality" />
+                <ScalarProperty Name="Name_Speciality" ColumnName="Name_Speciality" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Students">
+            <EntityTypeMapping TypeName="studentModel.Students">
+              <MappingFragment StoreEntitySet="Students">
+                <ScalarProperty Name="ID_Stud" ColumnName="ID_Stud" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Patronomic" ColumnName="Patronomic" />
+                <ScalarProperty Name="ID_Log_Pass_Stud" ColumnName="ID_Log_Pass_Stud" />
+                <ScalarProperty Name="Date_Birthday" ColumnName="Date_Birthday" />
+                <ScalarProperty Name="ID_Group" ColumnName="ID_Group" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

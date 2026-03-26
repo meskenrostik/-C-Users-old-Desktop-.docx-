@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="studentModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Group">
+    <Key>
+      <PropertyRef Name="ID_Group" />
+    </Key>
+    <Property Name="ID_Group" Type="Int32" Nullable="false" />
+    <Property Name="Number" Type="String" MaxLength="3" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ID_Speciality" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Speciality" Relationship="Self.FK_Group_Speciality" FromRole="Group" ToRole="Speciality" />
+    <NavigationProperty Name="Students" Relationship="Self.FK_Students_Group" FromRole="Group" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="Login_Password_Stud">
+    <Key>
+      <PropertyRef Name="ID_Log_Pass_Stud" />
+    </Key>
+    <Property Name="ID_Log_Pass_Stud" Type="Int32" Nullable="false" />
+    <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Pasword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Students" Relationship="Self.FK_Students_Login_Password_Stud" FromRole="Login_Password_Stud" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="Speciality">
+    <Key>
+      <PropertyRef Name="ID_Speciality" />
+    </Key>
+    <Property Name="ID_Speciality" Type="Int32" Nullable="false" />
+    <Property Name="Name_Speciality" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Group" Relationship="Self.FK_Group_Speciality" FromRole="Speciality" ToRole="Group" />
+  </EntityType>
+  <EntityType Name="Students">
+    <Key>
+      <PropertyRef Name="ID_Stud" />
+    </Key>
+    <Property Name="ID_Stud" Type="Int32" Nullable="false" />
+    <Property Name="Surname" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Patronomic" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="ID_Log_Pass_Stud" Type="Int32" />
+    <Property Name="Date_Birthday" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ID_Group" Type="Int32" Nullable="false" />
+    <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Group" Relationship="Self.FK_Students_Group" FromRole="Students" ToRole="Group" />
+    <NavigationProperty Name="Login_Password_Stud" Relationship="Self.FK_Students_Login_Password_Stud" FromRole="Students" ToRole="Login_Password_Stud" />
+  </EntityType>
+  <Association Name="FK_Group_Speciality">
+    <End Role="Speciality" Type="Self.Speciality" Multiplicity="1" />
+    <End Role="Group" Type="Self.Group" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Speciality">
+        <PropertyRef Name="ID_Speciality" />
+      </Principal>
+      <Dependent Role="Group">
+        <PropertyRef Name="ID_Speciality" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_Group">
+    <End Role="Group" Type="Self.Group" Multiplicity="1" />
+    <End Role="Students" Type="Self.Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="ID_Group" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="ID_Group" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_Login_Password_Stud">
+    <End Role="Login_Password_Stud" Type="Self.Login_Password_Stud" Multiplicity="0..1" />
+    <End Role="Students" Type="Self.Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Login_Password_Stud">
+        <PropertyRef Name="ID_Log_Pass_Stud" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="ID_Log_Pass_Stud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="studentEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Group" EntityType="Self.Group" />
+    <EntitySet Name="Login_Password_Stud" EntityType="Self.Login_Password_Stud" />
+    <EntitySet Name="Speciality" EntityType="Self.Speciality" />
+    <EntitySet Name="Students" EntityType="Self.Students" />
+    <AssociationSet Name="FK_Group_Speciality" Association="Self.FK_Group_Speciality">
+      <End Role="Speciality" EntitySet="Speciality" />
+      <End Role="Group" EntitySet="Group" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_Group" Association="Self.FK_Students_Group">
+      <End Role="Group" EntitySet="Group" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_Login_Password_Stud" Association="Self.FK_Students_Login_Password_Stud">
+      <End Role="Login_Password_Stud" EntitySet="Login_Password_Stud" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

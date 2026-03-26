@@ -1,0 +1,226 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\old\\source\\repos\\stud\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B673AA47-326F-4EB3-91AD-FE854A69DEC0}|stud.csproj|c:\\users\\old\\source\\repos\\stud\\pages\\studentspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B673AA47-326F-4EB3-91AD-FE854A69DEC0}|stud.csproj|solutionrelative:pages\\studentspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B673AA47-326F-4EB3-91AD-FE854A69DEC0}|stud.csproj|C:\\Users\\old\\source\\repos\\stud\\pages\\addpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B673AA47-326F-4EB3-91AD-FE854A69DEC0}|stud.csproj|solutionrelative:pages\\addpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B673AA47-326F-4EB3-91AD-FE854A69DEC0}|stud.csproj|C:\\Users\\old\\source\\repos\\stud\\pages\\authorizationpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B673AA47-326F-4EB3-91AD-FE854A69DEC0}|stud.csproj|solutionrelative:pages\\authorizationpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B673AA47-326F-4EB3-91AD-FE854A69DEC0}|stud.csproj|C:\\Users\\old\\source\\repos\\stud\\pages\\authorizationpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B673AA47-326F-4EB3-91AD-FE854A69DEC0}|stud.csproj|solutionrelative:pages\\authorizationpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B673AA47-326F-4EB3-91AD-FE854A69DEC0}|stud.csproj|C:\\Users\\old\\source\\repos\\stud\\window\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B673AA47-326F-4EB3-91AD-FE854A69DEC0}|stud.csproj|solutionrelative:window\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B673AA47-326F-4EB3-91AD-FE854A69DEC0}|stud.csproj|C:\\Users\\old\\source\\repos\\stud\\window\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B673AA47-326F-4EB3-91AD-FE854A69DEC0}|stud.csproj|solutionrelative:window\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B673AA47-326F-4EB3-91AD-FE854A69DEC0}|stud.csproj|C:\\Users\\old\\source\\repos\\stud\\classes\\connectionclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B673AA47-326F-4EB3-91AD-FE854A69DEC0}|stud.csproj|solutionrelative:classes\\connectionclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B673AA47-326F-4EB3-91AD-FE854A69DEC0}|stud.csproj|C:\\Users\\old\\source\\repos\\stud\\pages\\editpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B673AA47-326F-4EB3-91AD-FE854A69DEC0}|stud.csproj|solutionrelative:pages\\editpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B673AA47-326F-4EB3-91AD-FE854A69DEC0}|stud.csproj|C:\\Users\\old\\source\\repos\\stud\\pages\\addpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B673AA47-326F-4EB3-91AD-FE854A69DEC0}|stud.csproj|solutionrelative:pages\\addpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B673AA47-326F-4EB3-91AD-FE854A69DEC0}|stud.csproj|C:\\Users\\old\\source\\repos\\stud\\pages\\editpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B673AA47-326F-4EB3-91AD-FE854A69DEC0}|stud.csproj|solutionrelative:pages\\editpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B673AA47-326F-4EB3-91AD-FE854A69DEC0}|stud.csproj|C:\\Users\\old\\source\\repos\\stud\\pages\\studentspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B673AA47-326F-4EB3-91AD-FE854A69DEC0}|stud.csproj|solutionrelative:pages\\studentspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B673AA47-326F-4EB3-91AD-FE854A69DEC0}|stud.csproj|C:\\Users\\old\\source\\repos\\stud\\dbmodel\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{B673AA47-326F-4EB3-91AD-FE854A69DEC0}|stud.csproj|solutionrelative:dbmodel\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B673AA47-326F-4EB3-91AD-FE854A69DEC0}|stud.csproj|C:\\Users\\old\\source\\repos\\stud\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B673AA47-326F-4EB3-91AD-FE854A69DEC0}|stud.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AddPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\old\\source\\repos\\stud\\Pages\\AddPage.xaml.cs",
+              "RelativeDocumentMoniker": "Pages\\AddPage.xaml.cs",
+              "ToolTip": "C:\\Users\\old\\source\\repos\\stud\\Pages\\AddPage.xaml.cs",
+              "RelativeToolTip": "Pages\\AddPage.xaml.cs",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAswCIAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T20:51:02.017Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AddPage.xaml",
+              "DocumentMoniker": "C:\\Users\\old\\source\\repos\\stud\\Pages\\AddPage.xaml",
+              "RelativeDocumentMoniker": "Pages\\AddPage.xaml",
+              "ToolTip": "C:\\Users\\old\\source\\repos\\stud\\Pages\\AddPage.xaml",
+              "RelativeToolTip": "Pages\\AddPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-26T20:48:38.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EditPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\old\\source\\repos\\stud\\Pages\\EditPage.xaml.cs",
+              "RelativeDocumentMoniker": "Pages\\EditPage.xaml.cs",
+              "ToolTip": "C:\\Users\\old\\source\\repos\\stud\\Pages\\EditPage.xaml.cs",
+              "RelativeToolTip": "Pages\\EditPage.xaml.cs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAowIoAAABWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T20:40:42.363Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StudentsPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\old\\source\\repos\\stud\\Pages\\StudentsPage.xaml.cs",
+              "RelativeDocumentMoniker": "Pages\\StudentsPage.xaml.cs",
+              "ToolTip": "C:\\Users\\old\\source\\repos\\stud\\Pages\\StudentsPage.xaml.cs",
+              "RelativeToolTip": "Pages\\StudentsPage.xaml.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAkwD8AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T14:46:24.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthorizationPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\old\\source\\repos\\stud\\Pages\\AuthorizationPage.xaml.cs",
+              "RelativeDocumentMoniker": "Pages\\AuthorizationPage.xaml.cs",
+              "ToolTip": "C:\\Users\\old\\source\\repos\\stud\\Pages\\AuthorizationPage.xaml.cs",
+              "RelativeToolTip": "Pages\\AuthorizationPage.xaml.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAxwB8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T14:18:46.362Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\old\\source\\repos\\stud\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\Users\\old\\source\\repos\\stud\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-26T13:30:28.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "StudentsPage.xaml",
+              "DocumentMoniker": "C:\\Users\\old\\source\\repos\\stud\\Pages\\StudentsPage.xaml",
+              "RelativeDocumentMoniker": "Pages\\StudentsPage.xaml",
+              "ToolTip": "C:\\Users\\old\\source\\repos\\stud\\Pages\\StudentsPage.xaml",
+              "RelativeToolTip": "Pages\\StudentsPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-26T13:15:53.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EditPage.xaml",
+              "DocumentMoniker": "C:\\Users\\old\\source\\repos\\stud\\Pages\\EditPage.xaml",
+              "RelativeDocumentMoniker": "Pages\\EditPage.xaml",
+              "ToolTip": "C:\\Users\\old\\source\\repos\\stud\\Pages\\EditPage.xaml",
+              "RelativeToolTip": "Pages\\EditPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-26T13:15:29.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthorizationPage.xaml",
+              "DocumentMoniker": "C:\\Users\\old\\source\\repos\\stud\\Pages\\AuthorizationPage.xaml",
+              "RelativeDocumentMoniker": "Pages\\AuthorizationPage.xaml",
+              "ToolTip": "C:\\Users\\old\\source\\repos\\stud\\Pages\\AuthorizationPage.xaml",
+              "RelativeToolTip": "Pages\\AuthorizationPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-26T13:14:32.529Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ConnectionClass.cs",
+              "DocumentMoniker": "C:\\Users\\old\\source\\repos\\stud\\Classes\\ConnectionClass.cs",
+              "RelativeDocumentMoniker": "Classes\\ConnectionClass.cs",
+              "ToolTip": "C:\\Users\\old\\source\\repos\\stud\\Classes\\ConnectionClass.cs",
+              "RelativeToolTip": "Classes\\ConnectionClass.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T12:57:51.072Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\old\\source\\repos\\stud\\DBModel\\Model1.edmx",
+              "RelativeDocumentMoniker": "DBModel\\Model1.edmx",
+              "ToolTip": "C:\\Users\\old\\source\\repos\\stud\\DBModel\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "DBModel\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2026-03-26T11:05:38.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\old\\source\\repos\\stud\\Window\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "Window\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\old\\source\\repos\\stud\\Window\\MainWindow.xaml",
+              "RelativeToolTip": "Window\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-19T08:32:43.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\old\\source\\repos\\stud\\Window\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "Window\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\old\\source\\repos\\stud\\Window\\MainWindow.xaml.cs",
+              "RelativeToolTip": "Window\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T08:32:41.426Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

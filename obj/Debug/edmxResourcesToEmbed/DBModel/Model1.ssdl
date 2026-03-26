@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище studentModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Group">
+    <Key>
+      <PropertyRef Name="ID_Group" />
+    </Key>
+    <Property Name="ID_Group" Type="int" Nullable="false" />
+    <Property Name="Number" Type="nvarchar" MaxLength="3" Nullable="false" />
+    <Property Name="ID_Speciality" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Login_Password_Stud">
+    <Key>
+      <PropertyRef Name="ID_Log_Pass_Stud" />
+    </Key>
+    <Property Name="ID_Log_Pass_Stud" Type="int" Nullable="false" />
+    <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Pasword" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Speciality">
+    <Key>
+      <PropertyRef Name="ID_Speciality" />
+    </Key>
+    <Property Name="ID_Speciality" Type="int" Nullable="false" />
+    <Property Name="Name_Speciality" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Students">
+    <Key>
+      <PropertyRef Name="ID_Stud" />
+    </Key>
+    <Property Name="ID_Stud" Type="int" Nullable="false" />
+    <Property Name="Surname" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="25" Nullable="false" />
+    <Property Name="Patronomic" Type="nvarchar" MaxLength="25" />
+    <Property Name="ID_Log_Pass_Stud" Type="int" />
+    <Property Name="Date_Birthday" Type="date" Nullable="false" />
+    <Property Name="ID_Group" Type="int" Nullable="false" />
+    <Property Name="Photo" Type="image" />
+  </EntityType>
+  <Association Name="FK_Group_Speciality">
+    <End Role="Speciality" Type="Self.Speciality" Multiplicity="1" />
+    <End Role="Group" Type="Self.Group" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Speciality">
+        <PropertyRef Name="ID_Speciality" />
+      </Principal>
+      <Dependent Role="Group">
+        <PropertyRef Name="ID_Speciality" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_Group">
+    <End Role="Group" Type="Self.Group" Multiplicity="1" />
+    <End Role="Students" Type="Self.Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="ID_Group" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="ID_Group" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_Login_Password_Stud">
+    <End Role="Login_Password_Stud" Type="Self.Login_Password_Stud" Multiplicity="0..1" />
+    <End Role="Students" Type="Self.Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Login_Password_Stud">
+        <PropertyRef Name="ID_Log_Pass_Stud" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="ID_Log_Pass_Stud" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище studentModelContainer">
+    <EntitySet Name="Group" EntityType="Self.Group" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Login_Password_Stud" EntityType="Self.Login_Password_Stud" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Speciality" EntityType="Self.Speciality" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Group_Speciality" Association="Self.FK_Group_Speciality">
+      <End Role="Speciality" EntitySet="Speciality" />
+      <End Role="Group" EntitySet="Group" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_Group" Association="Self.FK_Students_Group">
+      <End Role="Group" EntitySet="Group" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_Login_Password_Stud" Association="Self.FK_Students_Login_Password_Stud">
+      <End Role="Login_Password_Stud" EntitySet="Login_Password_Stud" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
